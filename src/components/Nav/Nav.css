@@ -1,0 +1,7 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(73, 79, 82);
+  min-height: 9vh;
+}
