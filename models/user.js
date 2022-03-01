@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
   timestamps: true,
 })
 
+
 userSchema.set('toJSON', {
   transform: function (doc, ret) {
     // remove the password property when serializing doc to JSON

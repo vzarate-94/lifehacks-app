@@ -1,11 +1,13 @@
+/** @jsxRuntime classic */
+
 import React, { useState } from 'react'
 import { Route, Redirect, useHistory } from 'react-router-dom'
-import Nav from '../components/Nav/Nav'
-import Signup from '../pages/Signup/Signup'
-import Login from '../pages/Login/Login'
-import Landing from '../pages/Landing/Landing'
-import Users from '../pages/Users/Users'
-import * as authService from '../services/authService'
+import NavBar from '../../components/NavBar/NavBar.jsx'
+import Signup from '../Signup/Signup.jsx'
+import Login from '../Login/Login.jsx'
+import Landing from '../Landing/Landing.jsx'
+import Users from '../Users/Users.jsx'
+import * as authService from '../../services/authService.js'
 
 const App = () => {
 	const history = useHistory()
@@ -23,7 +25,7 @@ const App = () => {
 
 	return (
 		<>
-			<Nav user={user} handleLogout={handleLogout}/>
+			<NavBar user={user} handleLogout={handleLogout}/>
 			<Route exact path='/'>
 				<Landing user={user} />
 			</Route>
