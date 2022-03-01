@@ -7,11 +7,3 @@
   color: antiquewhite;
 }
 
-a, a:visited, a:hover, a:active {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: lightblue;
-}
