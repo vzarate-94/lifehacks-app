@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
+import logo from '../../assets/images/myLogoWhite.png'
 
 
 
@@ -12,8 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
 	return (
 		<>
 		<nav className={styles.NavBar}>
-			<div>
-			<img src="" alt="" />
+			<img src={logo} alt="" className={styles.img} />
 			{user ? (
 				<ul className={styles.Nav_Links}>
 					<li>Welcome butthead, {user.name}</li>
@@ -25,7 +25,7 @@ const NavBar = ({ user, handleLogout }) => {
 					</li>
 				</ul>
 			) : (
-				<ul>
+				<ul className={styles.Nav_Links}>
 					<li>
 						<NavLink to="/login">Log In</NavLink>
 					</li>
@@ -37,7 +37,7 @@ const NavBar = ({ user, handleLogout }) => {
 					</li>
 				</ul>
 			)}
-			</div>
+			
 		</nav>
 	</>
 	)

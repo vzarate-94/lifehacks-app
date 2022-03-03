@@ -8,6 +8,7 @@ import Login from '../Login/Login.jsx'
 import Landing from '../Landing/Landing.jsx'
 import Users from '../Users/Users.jsx'
 import * as authService from '../../services/authService.js'
+import Counter from '../../components/Counter/Counter.jsx'
 
 const App = () => {
 	const history = useHistory()
@@ -28,6 +29,9 @@ const App = () => {
 			<NavBar user={user} handleLogout={handleLogout}/>
 			<Route exact path='/'>
 				<Landing user={user} />
+			</Route>
+			<Route exact path='/counter'>
+				<Counter />
 			</Route>
 			<Route exact path='/signup'>
 				{user ? 
